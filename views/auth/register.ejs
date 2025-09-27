@@ -1,0 +1,11 @@
+<% layout('layout') -%>
+<div class="container auth-page">
+  <h2>Registro</h2>
+  <% if(typeof error !== 'undefined'){ %><p class="error"><%= error %></p><% } %>
+  <form method="post" action="/auth/register">
+    <label>Nombre</label><input name="name" required>
+    <label>Email</label><input name="email" type="email" required>
+    <label>Contraseña</label><input name="password" type="password" required>
+    <button type="submit">Crear cuenta</button>
+  </form>
+</div>

@@ -1,0 +1,38 @@
+/* Psykeros styles - color palette provided */
+:root{
+  --cyan:#03AEF1;
+  --teal:#3B758C;
+  --mint:#05F2B4;
+  --orange:#F45242;
+  --maroon:#BF1738;
+  --font-sans: 'Helvetica Neue', Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+body{font-family:var(--font-sans);margin:0;color:#222;line-height:1.5}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+.site-header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:50}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:.5rem 0}
+.logo{height:64px}
+.main-nav a{margin:0 .5rem;text-decoration:none;color:#333}
+.header-actions{display:flex;align-items:center;gap:1rem}
+.btn{padding:.6rem 1rem;border-radius:6px;text-decoration:none;display:inline-block}
+.btn-primary{background:var(--cyan);color:#fff}
+.hero{padding:2rem 0;background:linear-gradient(90deg, rgba(3,174,241,0.08), rgba(91,206,184,0.05))}
+.hero-inner{display:flex;gap:2rem;align-items:center}
+.hero-text h1{font-size:2.2rem;margin:0}
+.hero-image img{max-width:360px;border-radius:8px}
+.services-preview .cards{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.card{flex:1 1 220px;padding:1rem;border:1px solid #eee;border-radius:8px;background:#fff}
+.price{color:var(--maroon);font-weight:700}
+.testimonial{background:#f7f7f7;padding:1rem;border-radius:6px;margin:1rem 0}
+.site-footer{background:#f8f8f8;padding:1rem 0;margin-top:2rem;border-top:1px solid #eee}
+.site-footer .container{display:flex;justify-content:space-between;align-items:center}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+.doctor-photo{max-width:220px;border-radius:8px;float:right;margin-left:1rem}
+
+@media(max-width:800px){
+  .hero-inner{flex-direction:column}
+  .main-nav{display:none}
+  .header-inner{flex-direction:column;gap:.5rem}
+}

@@ -1,0 +1,15 @@
+<% layout('layout') -%>
+<div class="container portal">
+  <h2>Portal de Cliente</h2>
+  <h3>Tus citas</h3>
+  <% appointments.forEach(a=>{ %>
+    <div class="appt">
+      <p><strong><%= a.date %></strong> - <%= a.time %> - <%= a.status %></p>
+      <p><%= a.notes %></p>
+    </div>
+  <% }) %>
+  <h3>Notas de sesión</h3>
+  <% notes.forEach(n=>{ %>
+    <div class="note"><p><%= n.content %></p><small><%= new Date(n.created_at).toLocaleString() %></small></div>
+  <% }) %>
+</div>

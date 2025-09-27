@@ -1,0 +1,31 @@
+<% layout('layout') -%>
+<div class="container contact-page">
+  <h2>Contacto y Reservas</h2>
+  <div class="contact-grid">
+    <div>
+      <h3>Agendar una cita</h3>
+      <form id="bookingForm" method="post" action="/api/book">
+        <label>Nombre</label><input name="name" required>
+        <label>Email</label><input type="email" name="email" required>
+        <label>Teléfono</label><input name="phone">
+        <label>Fecha</label><input type="date" name="date" required>
+        <label>Hora</label><input type="time" name="time" required>
+        <label>Notas</label><textarea name="notes"></textarea>
+        <button type="submit">Reservar cita</button>
+      </form>
+    </div>
+    <div>
+      <h3>Contacto</h3>
+      <form id="contactForm" method="post" action="/api/contact">
+        <label>Nombre</label><input name="name" required>
+        <label>Email</label><input type="email" name="email" required>
+        <label>Mensaje</label><textarea name="message" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <h4>Información</h4>
+      <p><strong>Tel MX:</strong> +52 8787023641</p>
+      <p><strong>Dirección:</strong> calle Matamoros 500, 3er piso despacho 4, Colonia Centro, Piedras Negras Coahuila, Mexico C.P. 26000</p>
+      <div id="map">[Mapa de Google aquí — reemplace con iframe]</div>
+    </div>
+  </div>
+</div>

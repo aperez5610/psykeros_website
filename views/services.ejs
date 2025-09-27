@@ -1,0 +1,13 @@
+<% layout('layout') -%>
+<div class="container">
+  <h2>Servicios</h2>
+  <ul class="services-list">
+    <% services.forEach(s=>{ %>
+      <li>
+        <h3><%= s.title %></h3>
+        <p>Precio: <strong><%= s.price %></strong></p>
+        <p>Descripción: Aquí va una descripción completa del servicio — personalizada para cada paciente.</p>
+      </li>
+    <% }) %>
+  </ul>
+</div>

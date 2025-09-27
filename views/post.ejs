@@ -1,0 +1,8 @@
+<% layout('layout') -%>
+<div class="container">
+  <article class="post">
+    <h1><%= post.title %></h1>
+    <p><small><%= new Date(post.created_at).toLocaleDateString() %></small></p>
+    <div class="post-content"><%= post.content %></div>
+  </article>
+</div>

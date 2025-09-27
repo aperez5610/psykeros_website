@@ -1,0 +1,16 @@
+<% layout('layout') -%>
+<div class="container">
+  <h2>Testimonios</h2>
+  <% testimonials.forEach(t=>{ %>
+    <div class="testimonial-item">
+      <p><%= t.content %></p>
+      <small>- <%= t.name %></small>
+    </div>
+  <% }) %>
+  <h3>Deja tu testimonio</h3>
+  <form id="testimonialForm" method="post" action="/api/testimonial">
+    <input type="text" name="name" placeholder="Tu nombre" required>
+    <textarea name="content" placeholder="Tu testimonio" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</div>

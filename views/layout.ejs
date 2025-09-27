@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="<%= (locals.lang||'es') %>">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Psykeros - Dra. María De Jesús Pérez Martínez</title>
+  <meta name="description" content="Consultorio de psicología - Dra. María De Jesús Pérez Martínez - Piedras Negras, Coah.">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/"><img src="/assets/images/logo.png" alt="Psykeros" class="logo"></a>
+      <nav class="main-nav">
+        <a href="/services"><%= __('Services') %></a>
+        <a href="/doctor"><%= __('Doctor') %></a>
+        <a href="/blog"><%= __('Blog') %></a>
+        <a href="/contact"><%= __('Contact') %></a>
+        <a href="/portal"><%= __('Portal') %></a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-primary" href="/contact"><%= __('Book') %></a>
+        <div class="lang-switch">
+          <a href="/lang/es">ES</a> | <a href="/lang/en">EN</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <%- body %>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="foot-left">
+        <p>&copy; <%= new Date().getFullYear() %> Psykeros - Dra. María De Jesús Pérez Martínez</p>
+        <p><strong>Tel MX:</strong> +52 8787023641&nbsp;&nbsp; <strong>Address:</strong> calle Matamoros 500, 3er piso despacho 4, Colonia Centro, Piedras Negras, Coah., México</p>
+      </div>
+      <div class="foot-right">
+        <a class="social-button" href="https://api.whatsapp.com/send?phone=5218787023641&text=Hola%20Psykeros%21%20Necesito%20ayuda" target="_blank">WhatsApp</a>
+        <a class="social-button" href="https://www.facebook.com/share/17HmUd1niY/" target="_blank">Facebook</a>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

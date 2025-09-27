@@ -1,0 +1,35 @@
+<% layout('layout') -%>
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <h1>Psykeros</h1>
+      <p>Consultorio de psicología - Dra. María De Jesús Pérez Martínez</p>
+      <a href="/contact" class="btn btn-primary">Agendar cita</a>
+    </div>
+    <div class="hero-image">
+      <img src="/assets/images/office_sample.jpg" alt="Consultorio">
+    </div>
+  </div>
+</section>
+
+<section class="services-preview container">
+  <h2>Servicios</h2>
+  <div class="cards">
+    <% for(let s of services || [{title:'Evaluación clínica',price:'1500 MXN'},{title:'Psicoterapia',price:'500 MXN'}]){ %>
+      <div class="card">
+        <h3><%= s.title %></h3>
+        <p class="price"><%= s.price %></p>
+        <a href="/services" class="link">Ver detalles</a>
+      </div>
+    <% } %>
+  </div>
+</section>
+
+<section class="testimonials container">
+  <h2>Testimonios</h2>
+  <% if(testimonials && testimonials.length){ testimonials.forEach(t=>{ %>
+    <blockquote class="testimonial"><p><%= t.content %></p><footer>- <%= t.name %></footer></blockquote>
+  <% }) } else { %>
+    <p>No hay testimonios aún.</p>
+  <% } %>
+</section>
